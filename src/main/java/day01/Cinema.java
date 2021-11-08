@@ -15,14 +15,32 @@ public class Cinema {
 
 
     public List<String> findMovieByTime(LocalDateTime time) {
+    List<String> result = new ArrayList<>();
+
+    for(Movie actual : movies) {
 
 
+        if (movieContainsTime(actual, time)){
+
+            result.add(actual.getTitle());
+
+
+        }
+
+    }
+        return  result;
 
 
     }
 
-
-
+    private boolean movieContainsTime(Movie movie, LocalDateTime time) {
+        for(LocalDateTime actual : movie.getOnScreen()){
+            if(actual.equals(time)){
+                return true;
+            }
+        }
+        return false;
+    }
 
 
     public static void main(String[] args) {
