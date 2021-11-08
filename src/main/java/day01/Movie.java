@@ -5,12 +5,19 @@ import java.time.LocalDateTime;
 public class Movie {
 
     String title;
-    LocalDateTime playTime;
+    List<LocalDateTime> onScreen;
 
     public Movie(String title, LocalDateTime playTime) {
         this.title = title;
-        this.playTime = playTime;
+        this.onScreen = playTime;
     }
 
 
+    public String getTitle() {
+        return title;
+    }
+
+    public LocalDateTime getPlayTime() {
+        return onScreen;
+    }
 }

@@ -7,16 +7,21 @@ import java.util.List;
 
 public class Cinema {
 
-    public static List<String> films = new ArrayList<>();
+    public static List<Movie> movies = new ArrayList<>();
 
     public void addMovie(Movie movie) {
-    films.add(movie);
+    movies.add(movie);
     }
 
 
-    public void findMovieByTime(LocalDateTime time) {
+    public List<String> findMovieByTime(LocalDateTime time) {
+
+
+
 
     }
+
+
 
 
 
