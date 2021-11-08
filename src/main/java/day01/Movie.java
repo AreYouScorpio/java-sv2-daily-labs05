@@ -1,23 +1,23 @@
 package day01;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class Movie {
 
     String title;
     List<LocalDateTime> onScreen;
 
-    public Movie(String title, LocalDateTime playTime) {
+    public Movie(String title, List<LocalDateTime> onScreen) {
         this.title = title;
-        this.onScreen = playTime;
+        this.onScreen = onScreen;
     }
-
 
     public String getTitle() {
         return title;
     }
 
-    public LocalDateTime getPlayTime() {
+    public List<LocalDateTime> getOnScreen() {
         return onScreen;
     }
 }

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Cinema {
 
-    public static List<Movie> movies = new ArrayList<>();
+    private List<Movie> movies = new ArrayList<>();
 
     public void addMovie(Movie movie) {
     movies.add(movie);
@@ -17,7 +17,7 @@ public class Cinema {
     public List<String> findMovieByTime(LocalDateTime time) {
     List<String> result = new ArrayList<>();
 
-    for(Movie actual : movies) {
+        for(Movie actual : movies) {
 
 
         if (movieContainsTime(actual, time)){
